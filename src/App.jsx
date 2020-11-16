@@ -8,7 +8,8 @@ class App extends Component {
     weight: "",
     height: "",
     bmiValue: "",
-    bmiMessage: ""
+    bmiMessage: "",
+    systemSelection:"metric"
   };
 
   onChangeHandler = e => this.setState({ [e.target.name]: e.target.value });
@@ -17,7 +18,8 @@ class App extends Component {
     e.preventDefault();
     const [bmiValue, bmiMessage] = calculateBmi(
       this.state.weight,
-      this.state.height
+      this.state.height,
+      this.state.systemSelection
     );
     this.setState({ bmiValue: bmiValue, bmiMessage: bmiMessage });
   };
@@ -26,6 +28,7 @@ class App extends Component {
     return (
       <div>
         <Form
+          systemSelection={this.state.systemSelection} 
           weight={this.state.weight}
           height={this.state.height}
           onChangeHandler={this.onChangeHandler}
