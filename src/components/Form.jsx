@@ -1,7 +1,7 @@
 import React from "react";
 
 const Form = props => {
-  let WeightPlaceHolder = props.systemSelection == "metric" ? "Weight in Kg" : "Weight in lbs"
+  let WeightPlaceHolder = props.systemSelection == "metric" ? "Weight in kg" : "Weight in lbs"
   let HeightPlaceHolder = props.systemSelection == "metric" ? "Height in cm" : "Height in inch"
 
   return (

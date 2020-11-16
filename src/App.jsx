@@ -28,7 +28,7 @@ class App extends Component {
     return (
       <div>
         <Form
-          systemSelection={this.state.systemSelection} 
+          systemSelection={this.state.systemSelection}
           weight={this.state.weight}
           height={this.state.height}
           onChangeHandler={this.onChangeHandler}
