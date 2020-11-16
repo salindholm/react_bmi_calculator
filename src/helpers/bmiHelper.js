@@ -1,5 +1,5 @@
-export const calculateBmi = (weight, height) => {
-  const bmiValue = (weight / (((height / 100) * height) / 100)).toFixed(2);
+export const calculateBmi = (weight, height, systemSelection) => {
+  const bmiValue = systemSelection == "metric" ? (weight / (((height / 100) * height) / 100)).toFixed(2) : ((weight / (height * height))*703).toFixed(2); 
   const bmiMessage = setBMIMessage(bmiValue);
   return [bmiValue, bmiMessage];
 };
