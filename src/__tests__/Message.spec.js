@@ -7,7 +7,7 @@ describe("Message component", () => {
 
   it ("renders with message prop", () => {
     expect(wrapper.find("#bmi-message").text()).toEqual(
-      "Your are Normal with a BMI of 23.59"
+      "You are Normal with a BMI of 23.59"
     );
   });
 });
